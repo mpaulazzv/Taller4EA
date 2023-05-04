@@ -30,14 +30,13 @@ public class AnalisisDatos {
         
         int m = 10;
         ST<String, Integer> topM = topMDelayed(st, m);
-        System.out.println("The " + m + " most delayed routes were: ");
+        System.out.println("The " + m + " most delayed routes were: " + "\n");
         listTopMDelayed(topM);
         
         
         Date from = new Date(2019, 0, 12);
         Date to = new Date(2019, 0, 25);
-        System.out.println("");
-        System.out.println(longestDelayCarrier(arrDelays, from, to));
+        System.out.println("\n"+longestDelayCarrier(arrDelays, from, to));
 
     }
 
@@ -145,10 +144,11 @@ public class AnalisisDatos {
         for(DelayRecord dr :delays){
             
             if((dr.getDate().compareTo(from)==0 || dr.getDate().compareTo(from)>0)
-                    && (dr.getDate().compareTo(to)==0) || dr.getDate().compareTo(to)<0)
-                
+                    && (dr.getDate().compareTo(to)==0) || dr.getDate().compareTo(to)<0){
+                    
                 arrdr.add(dr);
-        }
+            }
+       }
         
         for(DelayRecord dr: arrdr){
             
